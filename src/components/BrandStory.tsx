@@ -79,8 +79,8 @@ export default function BrandStory() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                "쭈꾸미는 매워야 제맛이지만,<br />
-                <span className="text-red-600">모두가 즐길 수 있어야 진짜 맛집"</span>
+                &ldquo;쭈꾸미는 매워야 제맛이지만,<br />
+                <span className="text-red-600">모두가 즐길 수 있어야 진짜 맛집&rdquo;</span>
               </h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
                 3대가 함께 와도 모두가 행복한 한 끼를 즐길 수 있도록,
@@ -88,7 +88,7 @@ export default function BrandStory() {
                 다양한 메뉴를 준비했습니다.
               </p>
               <p className="text-gray-700 mb-6 leading-relaxed">
-                특히 저희 쭈꾸미는 <strong>'착한 매운맛'</strong>으로
+                특히 저희 쭈꾸미는 <strong>&apos;착한 매운맛&apos;</strong>으로
                 처음엔 살짝 매콤하지만, 먹을수록 계속 당기는
                 중독성 있는 맛이 특징입니다.
               </p>
