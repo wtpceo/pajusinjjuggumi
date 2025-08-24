@@ -6,19 +6,23 @@ export default function VideoSection() {
   const videos = [
     {
       id: 1,
-      src: "https://m.naver.com/shorts/?mediaId=3A06EF6674A5D345DC7D0019BA0F3338DF97&serviceType=MOMENT&recType=SEARCH&panelType=vs_place&entryPoint=https%253A%252F%252Fpcmap.place.naver.com%252Frestaurant%252F2019570911%252Fhome%253Fentry%253Dbmp%2526from%253Dmap%2526fromPanelNum%253D2%2526timestamp%253D202508241520%2526locale%253Dko%2526svcName%253Dmap_pcv5%2526searchText%253D%2525ED%25258C%25258C%2525EC%2525A3%2525BC%252520%2525EC%25258B%2525A0%2525EC%2525AD%252588%2525EA%2525BE%2525B8%2525EB%2525AF%2525B8&blogId=foreverepde&docNo=11328428&recId=%7B%22type%22%3A%22PLACE%22%2C%22order%22%3A%22RECENT%22%2C%22query%22%3A%222019570911%22%2C%22seedIndex%22%3A1%7D&enableReverse=true&clickNsc=mapv5.restaurant&clickArea=cpr.clipvideo&oembed=true"
+      title: "신쭈꾸미 파주점 영상 1",
+      link: "https://naver.me/GMPmqjOb"
     },
     {
       id: 2,
-      src: "https://m.naver.com/shorts/?mediaId=3A06EF6674A5D345DC7D0019BA0F3338DF97&serviceType=MOMENT&recType=SEARCH&panelType=vs_place&entryPoint=https%253A%252F%252Fpcmap.place.naver.com%252Frestaurant%252F2019570911%252Fhome%253Fentry%253Dbmp%2526from%253Dmap%2526fromPanelNum%253D2%2526timestamp%253D202508241520%2526locale%253Dko%2526svcName%253Dmap_pcv5%2526searchText%253D%2525ED%25258C%25258C%2525EC%2525A3%2525BC%252520%2525EC%25258B%2525A0%2525EC%2525AD%252588%2525EA%2525BE%2525B8%2525EB%2525AF%2525B8&blogId=foreverepde&docNo=11328428&recId=%7B%22type%22%3A%22PLACE%22%2C%22order%22%3A%22RECENT%22%2C%22query%22%3A%222019570911%22%2C%22seedIndex%22%3A2%7D&enableReverse=true&clickNsc=mapv5.restaurant&clickArea=cpr.clipvideo&oembed=true"
+      title: "신쭈꾸미 파주점 영상 2",
+      link: "https://naver.me/GwSpD7S1"
     },
     {
       id: 3,
-      src: "https://m.naver.com/shorts/?mediaId=3A06EF6674A5D345DC7D0019BA0F3338DF97&serviceType=MOMENT&recType=SEARCH&panelType=vs_place&entryPoint=https%253A%252F%252Fpcmap.place.naver.com%252Frestaurant%252F2019570911%252Fhome%253Fentry%253Dbmp%2526from%253Dmap%2526fromPanelNum%253D2%2526timestamp%253D202508241520%2526locale%253Dko%2526svcName%253Dmap_pcv5%2526searchText%253D%2525ED%25258C%25258C%2525EC%2525A3%2525BC%252520%2525EC%25258B%2525A0%2525EC%2525AD%252588%2525EA%2525BE%2525B8%2525EB%2525AF%2525B8&blogId=foreverepde&docNo=11328428&recId=%7B%22type%22%3A%22PLACE%22%2C%22order%22%3A%22RECENT%22%2C%22query%22%3A%222019570911%22%2C%22seedIndex%22%3A3%7D&enableReverse=true&clickNsc=mapv5.restaurant&clickArea=cpr.clipvideo&oembed=true"
+      title: "신쭈꾸미 파주점 영상 3", 
+      link: "https://naver.me/GA8L1IuN"
     },
     {
       id: 4,
-      src: "https://m.naver.com/shorts/?mediaId=3A06EF6674A5D345DC7D0019BA0F3338DF97&serviceType=MOMENT&recType=SEARCH&panelType=vs_place&entryPoint=https%253A%252F%252Fpcmap.place.naver.com%252Frestaurant%252F2019570911%252Fhome%253Fentry%253Dbmp%2526from%253Dmap%2526fromPanelNum%253D2%2526timestamp%253D202508241520%2526locale%253Dko%2526svcName%253Dmap_pcv5%2526searchText%253D%2525ED%25258C%25258C%2525EC%2525A3%2525BC%252520%2525EC%25258B%2525A0%2525EC%2525AD%252588%2525EA%2525BE%2525B8%2525EB%2525AF%2525B8&blogId=foreverepde&docNo=11328428&recId=%7B%22type%22%3A%22PLACE%22%2C%22order%22%3A%22RECENT%22%2C%22query%22%3A%222019570911%22%2C%22seedIndex%22%3A4%7D&enableReverse=true&clickNsc=mapv5.restaurant&clickArea=cpr.clipvideo&oembed=true"
+      title: "신쭈꾸미 파주점 영상 4",
+      link: "https://naver.me/5CFWbsqa"
     }
   ];
 
@@ -36,36 +40,33 @@ export default function VideoSection() {
         </div>
 
         {/* 비디오 그리드 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
           {videos.map((video, index) => (
-            <div 
+            <a
               key={video.id}
-              className="relative group animate-fade-in-up"
+              href={video.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group animate-fade-in-up block"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="relative bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                {/* 비디오 아이콘 오버레이 */}
-                <div className="absolute top-4 left-4 z-10">
-                  <PlayCircle className="text-white drop-shadow-lg" size={32} />
-                </div>
-                
-                {/* 네이버 클립 임베드 */}
-                <div className="relative" style={{ paddingBottom: '177.8%' }}> {/* 9:16 비율 */}
-                  <iframe 
-                    src={video.src}
-                    className="absolute inset-0 w-full h-full"
-                    frameBorder="0" 
-                    allow="autoplay; clipboard-write; web-share" 
-                    allowFullScreen
-                    title={`신쭈꾸미 파주점 영상 ${video.id}`}
-                    loading="lazy"
-                  />
+                {/* 썸네일 플레이스홀더 */}
+                <div className="relative aspect-[9/16] bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center">
+                  {/* 비디오 아이콘 */}
+                  <PlayCircle className="text-white drop-shadow-lg" size={64} />
+                  
+                  {/* 비디오 제목 */}
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                    <p className="text-white text-sm font-semibold">{video.title}</p>
+                    <p className="text-white/70 text-xs mt-1">클릭하여 시청하기</p>
+                  </div>
                 </div>
                 
                 {/* 호버 효과 */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
