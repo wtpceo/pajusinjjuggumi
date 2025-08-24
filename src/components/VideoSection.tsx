@@ -1,39 +1,28 @@
 'use client';
 
-import { useState } from 'react';
-import { PlayCircle, X } from 'lucide-react';
+import { PlayCircle } from 'lucide-react';
 
 export default function VideoSection() {
-  const [selectedVideo, setSelectedVideo] = useState<{ title: string; link: string } | null>(null);
-  
   const videos = [
     {
       id: 1,
       title: "신쭈꾸미 파주점 영상 1",
-      link: "https://naver.me/GMPmqjOb",
-      thumbnail: "매콤한 쭈꾸미 볶음",
-      description: "불맛 가득한 쭈꾸미"
+      src: "https://m.naver.com/shorts/?mediaId=3A06EF6674A5D345DC7D0019BA0F3338DF97&serviceType=MOMENT&recType=SEARCH&panelType=vs_place&entryPoint=https%253A%252F%252Fpcmap.place.naver.com%252Frestaurant%252F2019570911%252Fhome%253Fentry%253Dbmp%2526from%253Dmap%2526fromPanelNum%253D2%2526timestamp%253D202508241520%2526locale%253Dko%2526svcName%253Dmap_pcv5%2526searchText%253D%2525ED%25258C%25258C%2525EC%2525A3%2525BC%252520%2525EC%25258B%2525A0%2525EC%2525AD%252588%2525EA%2525BE%2525B8%2525EB%2525AF%2525B8&blogId=foreverepde&docNo=11328428&recId=%7B%22type%22%3A%22PLACE%22%2C%22order%22%3A%22RECENT%22%2C%22query%22%3A%222019570911%22%2C%22seedIndex%22%3A1%7D&enableReverse=true&clickNsc=mapv5.restaurant&clickArea=cpr.clipvideo&oembed=true"
     },
     {
       id: 2,
       title: "신쭈꾸미 파주점 영상 2",
-      link: "https://naver.me/GwSpD7S1",
-      thumbnail: "신선한 재료 준비",
-      description: "매일 신선하게 준비"
+      src: "https://m.naver.com/shorts/?mediaId=3A06EF6674A5D345DC7D0019BA0F3338DF97&serviceType=MOMENT&recType=SEARCH&panelType=vs_place&entryPoint=https%253A%252F%252Fpcmap.place.naver.com%252Frestaurant%252F2019570911%252Fhome%253Fentry%253Dbmp%2526from%253Dmap%2526fromPanelNum%253D2%2526timestamp%253D202508241520%2526locale%253Dko%2526svcName%253Dmap_pcv5%2526searchText%253D%2525ED%25258C%25258C%2525EC%2525A3%2525BC%252520%2525EC%25258B%2525A0%2525EC%2525AD%252588%2525EA%2525BE%2525B8%2525EB%2525AF%2525B8&blogId=foreverepde&docNo=11328428&recId=%7B%22type%22%3A%22PLACE%22%2C%22order%22%3A%22RECENT%22%2C%22query%22%3A%222019570911%22%2C%22seedIndex%22%3A1%7D&enableReverse=true&clickNsc=mapv5.restaurant&clickArea=cpr.clipvideo&oembed=true"
     },
     {
       id: 3,
       title: "신쭈꾸미 파주점 영상 3", 
-      link: "https://naver.me/GA8L1IuN",
-      thumbnail: "다양한 사이드 메뉴",
-      description: "풍성한 한 상"
+      src: "https://m.naver.com/shorts/?mediaId=3A06EF6674A5D345DC7D0019BA0F3338DF97&serviceType=MOMENT&recType=SEARCH&panelType=vs_place&entryPoint=https%253A%252F%252Fpcmap.place.naver.com%252Frestaurant%252F2019570911%252Fhome%253Fentry%253Dbmp%2526from%253Dmap%2526fromPanelNum%253D2%2526timestamp%253D202508241520%2526locale%253Dko%2526svcName%253Dmap_pcv5%2526searchText%253D%2525ED%25258C%25258C%2525EC%2525A3%2525BC%252520%2525EC%25258B%2525A0%2525EC%2525AD%252588%2525EA%2525BE%2525B8%2525EB%2525AF%2525B8&blogId=foreverepde&docNo=11328428&recId=%7B%22type%22%3A%22PLACE%22%2C%22order%22%3A%22RECENT%22%2C%22query%22%3A%222019570911%22%2C%22seedIndex%22%3A1%7D&enableReverse=true&clickNsc=mapv5.restaurant&clickArea=cpr.clipvideo&oembed=true"
     },
     {
       id: 4,
       title: "신쭈꾸미 파주점 영상 4",
-      link: "https://naver.me/5CFWbsqa",
-      thumbnail: "매장 분위기",
-      description: "편안한 공간"
+      src: "https://m.naver.com/shorts/?mediaId=3A06EF6674A5D345DC7D0019BA0F3338DF97&serviceType=MOMENT&recType=SEARCH&panelType=vs_place&entryPoint=https%253A%252F%252Fpcmap.place.naver.com%252Frestaurant%252F2019570911%252Fhome%253Fentry%253Dbmp%2526from%253Dmap%2526fromPanelNum%253D2%2526timestamp%253D202508241520%2526locale%253Dko%2526svcName%253Dmap_pcv5%2526searchText%253D%2525ED%25258C%25258C%2525EC%2525A3%2525BC%252520%2525EC%25258B%2525A0%2525EC%2525AD%252588%2525EA%2525BE%2525B8%2525EB%2525AF%2525B8&blogId=foreverepde&docNo=11328428&recId=%7B%22type%22%3A%22PLACE%22%2C%22order%22%3A%22RECENT%22%2C%22query%22%3A%222019570911%22%2C%22seedIndex%22%3A1%7D&enableReverse=true&clickNsc=mapv5.restaurant&clickArea=cpr.clipvideo&oembed=true"
     }
   ];
 
@@ -51,39 +40,31 @@ export default function VideoSection() {
         </div>
 
         {/* 비디오 그리드 */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
           {videos.map((video, index) => (
             <div
               key={video.id}
-              className="relative group animate-fade-in-up cursor-pointer"
+              className="relative group animate-fade-in-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="relative bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                {/* 썸네일 플레이스홀더 */}
-                <div className="relative aspect-[9/16] bg-gradient-to-br from-red-500 to-orange-500 flex flex-col items-center justify-center p-6">
-                  {/* 비디오 아이콘 */}
-                  <PlayCircle className="text-white drop-shadow-lg mb-4" size={64} />
-                  
-                  {/* 썸네일 텍스트 */}
-                  <h3 className="text-white text-lg font-bold text-center mb-2">{video.thumbnail}</h3>
-                  <p className="text-white/80 text-sm text-center">{video.description}</p>
-                  
-                  {/* 비디오 제목 */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                    <p className="text-white text-sm font-semibold">{video.title}</p>
-                    <a 
-                      href={video.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white/70 text-xs mt-1 hover:text-white underline"
-                    >
-                      네이버에서 보기 →
-                    </a>
-                  </div>
+                {/* 네이버 클립 iframe 임베드 */}
+                <div className="relative" style={{ paddingBottom: '177.8%' }}> {/* 9:16 비율 */}
+                  <iframe 
+                    src={video.src}
+                    className="absolute inset-0 w-full h-full"
+                    frameBorder="0" 
+                    allow="autoplay; clipboard-write; web-share" 
+                    allowFullScreen
+                    title={video.title}
+                    loading="lazy"
+                  />
                 </div>
                 
-                {/* 호버 효과 */}
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* 비디오 아이콘 오버레이 */}
+                <div className="absolute top-4 left-4 z-10 pointer-events-none">
+                  <PlayCircle className="text-white drop-shadow-lg opacity-80" size={32} />
+                </div>
               </div>
             </div>
           ))}
