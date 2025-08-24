@@ -3,9 +3,25 @@
 import { useEffect, useRef } from 'react';
 import Script from 'next/script';
 
+interface NaverMaps {
+  LatLng: new (lat: number, lng: number) => unknown;
+  Map: new (element: HTMLElement, options: unknown) => unknown;
+  Marker: new (options: unknown) => unknown;
+  InfoWindow: new (options: unknown) => { open: (map: unknown, marker: unknown) => void; close: () => void; getMap: () => unknown };
+  Animation: { BOUNCE: unknown };
+  Position: { TOP_RIGHT: unknown; TOP_LEFT: unknown };
+  Size: new (width: number, height: number) => unknown;
+  Point: new (x: number, y: number) => unknown;
+  Event: {
+    addListener: (target: unknown, eventName: string, listener: () => void) => void;
+  };
+}
+
 declare global {
   interface Window {
-    naver: any;
+    naver: {
+      maps: NaverMaps;
+    };
   }
 }
 
@@ -15,7 +31,7 @@ interface NaverMapProps {
 
 export default function NaverMap({ className = '' }: NaverMapProps) {
   const mapRef = useRef<HTMLDivElement>(null);
-  const mapInstanceRef = useRef<any>(null);
+  const mapInstanceRef = useRef<unknown>(null);
 
   const initializeMap = () => {
     if (!mapRef.current || !window.naver) return;
@@ -112,7 +128,7 @@ export default function NaverMap({ className = '' }: NaverMapProps) {
   return (
     <>
       <Script
-        src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=3v9kbcnxom`}
+        src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID || '3v9kbcnxom'}`}
         strategy="afterInteractive"
         onLoad={initializeMap}
       />
