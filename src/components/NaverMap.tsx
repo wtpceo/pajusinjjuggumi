@@ -3,9 +3,13 @@
 import { useEffect, useRef } from 'react';
 import Script from 'next/script';
 
+interface NaverMapInstance {
+  setCenter: (latlng: unknown) => void;
+}
+
 interface NaverMaps {
   LatLng: new (lat: number, lng: number) => unknown;
-  Map: new (element: HTMLElement, options: unknown) => unknown;
+  Map: new (element: HTMLElement, options: unknown) => NaverMapInstance;
   Marker: new (options: unknown) => unknown;
   InfoWindow: new (options: unknown) => { open: (map: unknown, marker: unknown) => void; close: () => void; getMap: () => unknown };
   Animation: { BOUNCE: unknown };
@@ -31,7 +35,7 @@ interface NaverMapProps {
 
 export default function NaverMap({ className = '' }: NaverMapProps) {
   const mapRef = useRef<HTMLDivElement>(null);
-  const mapInstanceRef = useRef<unknown>(null);
+  const mapInstanceRef = useRef<NaverMapInstance | null>(null);
 
   const initializeMap = () => {
     if (!mapRef.current || !window.naver) return;
