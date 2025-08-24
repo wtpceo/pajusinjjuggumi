@@ -74,7 +74,18 @@ export default function LocationSection() {
               </div>
             </div>
             
-            <NaverMap className="shadow-lg" />
+            {/* 네이버 지도 iframe - 안정적인 방식 */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-[400px]">
+              <iframe 
+                src="https://map.naver.com/p/entry/place/1469898"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="신쭈꾸미 파주점 네이버 지도"
+              />
+            </div>
           </div>
         </div>
       </div>
