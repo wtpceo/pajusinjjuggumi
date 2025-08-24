@@ -18,7 +18,6 @@ export default function Header() {
           
           <nav className="hidden md:flex items-center space-x-6">
             <a href="#menu" className="text-gray-700 hover:text-red-600 transition">메뉴</a>
-            <a href="#location" className="text-gray-700 hover:text-red-600 transition">위치</a>
             <a href="#contact" className="text-gray-700 hover:text-red-600 transition">연락처</a>
           </nav>
           
@@ -48,13 +47,6 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               메뉴
-            </a>
-            <a 
-              href="#location" 
-              className="px-4 py-3 text-gray-700 hover:bg-gray-50 border-b"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              위치
             </a>
             <a 
               href="#contact" 

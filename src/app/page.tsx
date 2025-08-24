@@ -4,7 +4,6 @@ import BrandStory from '@/components/BrandStory';
 import ReviewSection from '@/components/ReviewSection';
 import GallerySection from '@/components/GallerySection';
 import MenuSection from '@/components/MenuSection';
-import LocationSection from '@/components/LocationSection';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
         <ReviewSection />
         <GallerySection />
         <MenuSection />
-        <LocationSection />
       </main>
       <Footer />
     </>
