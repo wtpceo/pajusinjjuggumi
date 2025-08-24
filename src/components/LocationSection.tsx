@@ -1,6 +1,20 @@
 'use client';
 
 import { MapPin, Phone, Clock, Car } from 'lucide-react';
+import dynamic from 'next/dynamic';
+
+// 클라이언트 사이드에서만 렌더링되도록 동적 임포트
+const NaverMap = dynamic(() => import('./NaverMap'), {
+  ssr: false,
+  loading: () => (
+    <div className="bg-gray-300 rounded-lg shadow-lg h-[400px] flex items-center justify-center">
+      <div className="text-center">
+        <MapPin size={48} className="text-gray-500 mx-auto mb-4 animate-pulse" />
+        <p className="text-gray-600">지도를 불러오는 중...</p>
+      </div>
+    </div>
+  ),
+});
 
 export default function LocationSection() {
   return (
@@ -60,13 +74,7 @@ export default function LocationSection() {
               </div>
             </div>
             
-            <div className="bg-gray-300 rounded-lg shadow-lg h-[400px] flex items-center justify-center">
-              <div className="text-center">
-                <MapPin size={48} className="text-gray-500 mx-auto mb-4" />
-                <p className="text-gray-600">지도 API 연동 예정</p>
-                <p className="text-sm text-gray-500 mt-2">네이버 또는 카카오맵 연동</p>
-              </div>
-            </div>
+            <NaverMap className="shadow-lg" />
           </div>
         </div>
       </div>

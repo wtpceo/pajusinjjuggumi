@@ -12,31 +12,17 @@ interface GalleryImage {
 }
 
 // 갤러리 이미지 데이터
-// 실제 이미지가 준비되면 주석을 해제하고 사용하세요
 const galleryImages: GalleryImage[] = [
-  // 실제 이미지 경로 (이미지 준비 후 주석 해제)
-  // { id: 1, src: '/images/gallery/gallery-1.jpg', alt: '신선한 쭈꾸미', category: '메인요리' },
-  // { id: 2, src: '/images/gallery/gallery-2.jpg', alt: '매장 내부', category: '매장' },
-  // { id: 3, src: '/images/gallery/gallery-3.jpg', alt: '쭈꾸미 철판', category: '메인요리' },
-  // { id: 4, src: '/images/gallery/gallery-4.jpg', alt: '왕돈까스', category: '사이드' },
-  // { id: 5, src: '/images/gallery/gallery-5.jpg', alt: '화덕피자', category: '사이드' },
-  // { id: 6, src: '/images/gallery/gallery-6.jpg', alt: '정식 세트', category: '정식' },
-  // { id: 7, src: '/images/gallery/gallery-7.jpg', alt: '달걀찜', category: '사이드' },
-  // { id: 8, src: '/images/gallery/gallery-8.jpg', alt: '냉면', category: '사이드' },
-  // { id: 9, src: '/images/gallery/gallery-9.jpg', alt: '볶음밥', category: '메인요리' },
-  // { id: 10, src: '/images/gallery/gallery-10.jpg', alt: '매장 전경', category: '매장' },
-  
-  // 개발용 목업 이미지
-  { id: 1, src: 'https://images.unsplash.com/photo-1583835746434-cf1534674b41?w=800&h=800&fit=crop', alt: '신선한 쭈꾸미', category: '메인요리' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=800&fit=crop', alt: '매장 내부', category: '매장' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1590301157890-4810ed352733?w=800&h=800&fit=crop', alt: '쭈꾸미 철판', category: '메인요리' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=800&fit=crop', alt: '왕돈까스', category: '사이드' },
-  { id: 5, src: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&h=800&fit=crop', alt: '화덕피자', category: '사이드' },
-  { id: 6, src: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&h=800&fit=crop', alt: '정식 세트', category: '정식' },
-  { id: 7, src: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=800&fit=crop', alt: '달걀찜', category: '사이드' },
-  { id: 8, src: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&h=800&fit=crop', alt: '냉면', category: '사이드' },
-  { id: 9, src: 'https://images.unsplash.com/photo-1559058789-672da06263d8?w=800&h=800&fit=crop', alt: '볶음밥', category: '메인요리' },
-  { id: 10, src: 'https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?w=800&h=800&fit=crop', alt: '매장 전경', category: '매장' },
+  { id: 1, src: '/images/gallery/gallery-1.webp', alt: '신선한 쭈꾸미 볶음', category: '메인요리' },
+  { id: 2, src: '/images/gallery/gallery-2.webp', alt: '매장 내부', category: '매장' },
+  { id: 3, src: '/images/gallery/gallery-3.webp', alt: '쭈꾸미 철판', category: '메인요리' },
+  { id: 4, src: '/images/gallery/gallery-4.webp', alt: '왕돈까스', category: '사이드' },
+  { id: 5, src: '/images/gallery/gallery-5.webp', alt: '화덕피자', category: '사이드' },
+  { id: 6, src: '/images/gallery/gallery-6.webp', alt: '정식 세트', category: '정식' },
+  { id: 7, src: '/images/gallery/gallery-7.webp', alt: '달걀찜', category: '사이드' },
+  { id: 8, src: '/images/gallery/gallery-8.webp', alt: '냉면', category: '사이드' },
+  { id: 9, src: '/images/gallery/gallery-9.webp', alt: '볶음밥', category: '메인요리' },
+  { id: 10, src: '/images/gallery/gallery-10.webp', alt: '매장 전경', category: '매장' },
 ];
 
 export default function GallerySection() {
