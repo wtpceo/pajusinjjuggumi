@@ -64,12 +64,10 @@ export default function Hero() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10 animate-fade-in-up animation-delay-400">
             <a 
-              href="#" 
+              href="https://booking.naver.com/booking/6/bizes/1469898" 
               className="group relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold rounded-full shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden text-sm sm:text-base"
-              onClick={(e) => {
-                e.preventDefault();
-                alert('네이버 예약 링크가 준비 중입니다.');
-              }}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-red-700 to-red-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               <svg className="w-5 h-5 mr-2 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
