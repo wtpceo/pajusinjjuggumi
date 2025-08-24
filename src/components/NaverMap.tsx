@@ -132,7 +132,7 @@ export default function NaverMap({ className = '' }: NaverMapProps) {
   return (
     <>
       <Script
-        src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID || '3v9kbcnxom'}`}
+        src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID || 'ihkefkfwuw'}`}
         strategy="afterInteractive"
         onLoad={initializeMap}
       />
