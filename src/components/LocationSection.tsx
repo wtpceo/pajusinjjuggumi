@@ -77,7 +77,7 @@ export default function LocationSection() {
             {/* 네이버 지도 iframe - 안정적인 방식 */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden h-[400px]">
               <iframe 
-                src="https://map.naver.com/p/entry/place/1469898"
+                src="https://map.naver.com/p/search/경기%20파주시%20신촌동%2060-1/address/14117787.1687083,4541971.0152626,경기%20파주시%20신촌동%2060-1,new?c=19.00,0,0,0,dh&isCorrectAnswer=true"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
