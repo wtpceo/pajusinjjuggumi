@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import BrandStory from '@/components/BrandStory';
 import ReviewSection from '@/components/ReviewSection';
 import GallerySection from '@/components/GallerySection';
+import VideoSection from '@/components/VideoSection';
 import MenuSection from '@/components/MenuSection';
 import Footer from '@/components/Footer';
 
@@ -15,6 +16,7 @@ export default function Home() {
         <BrandStory />
         <ReviewSection />
         <GallerySection />
+        <VideoSection />
         <MenuSection />
       </main>
       <Footer />
