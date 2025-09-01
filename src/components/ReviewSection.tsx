@@ -207,23 +207,18 @@ export default function ReviewSection() {
           <p className="text-gray-600 mb-6 text-lg">
             더 많은 리뷰를 확인하고 싶으신가요?
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="group px-8 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full shadow-lg hover:shadow-2xl transform transition-all duration-300 hover:scale-105">
-              <span className="flex items-center justify-center">
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                </svg>
-                네이버 플레이스
-              </span>
-            </button>
-            <button className="group px-8 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 rounded-full shadow-lg hover:shadow-2xl transform transition-all duration-300 hover:scale-105">
-              <span className="flex items-center justify-center font-semibold">
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
-                </svg>
-                카카오맵
-              </span>
-            </button>
+          <div className="flex justify-center">
+            <a 
+              href="https://map.naver.com/p/search/%ED%8C%8C%EC%A3%BC%EC%8B%A0%EC%AD%88%EA%BE%B8%EB%AF%B8/place/2019570911?c=15.00,0,0,0,dh&placePath=/review?entry=bmp&from=map&fromPanelNum=2&locale=ko&searchText=%ED%8C%8C%EC%A3%BC%EC%8B%A0%EC%AD%88%EA%BE%B8%EB%AF%B8&svcName=map_pcv5&timestamp=202509020152&from=map&fromPanelNum=2&timestamp=202509020152&locale=ko&svcName=map_pcv5&searchText=%ED%8C%8C%EC%A3%BC%EC%8B%A0%EC%AD%88%EA%BE%B8%EB%AF%B8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group px-8 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full shadow-lg hover:shadow-2xl transform transition-all duration-300 hover:scale-105 inline-flex items-center justify-center"
+            >
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              네이버 플레이스
+            </a>
           </div>
         </div>
       </div>
